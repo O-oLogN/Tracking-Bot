@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 
 time = []
 status = []
-tracking = open("D:\\Code\\Python\\tracking.txt", "r")
+tracking = open("********************", "r")
 token = tracking.read().split()
 token.pop(0)        # Remove first element because it's content not data of statistics
 for item in token:
@@ -13,5 +13,5 @@ fig = plt.figure()
 fig.set_figheight(30)
 fig.set_figwidth(300)
 plt.plot(time, status)
-plt.savefig("D:\\Code\\Python\\figure.jpg", bbox_inches = 'tight')
+plt.savefig("********************", bbox_inches = 'tight')
 
