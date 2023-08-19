@@ -18,9 +18,9 @@ import time
 
 import os
 
-web_path = "https://www.facebook.com"
+web_path = "************************************"
 
-infoFile = open("C:\\Users\\hiepg\\Info.txt", "r")
+infoFile = open("********************", "r")
 
 info = infoFile.read().split()
 
@@ -87,14 +87,14 @@ def GetSaveFileName():
     return strFileName
 
 while True:
-    tracking = open("D:\\Code\\Python\\tracking.txt", "r")
+    tracking = open("********************", "r")
 
     flagOfTrackingFile = tracking.readline().strip()
 
     saveFileName = GetSaveFileName()
 
     if currentSessionDayMonthYear != flagOfTrackingFile:
-        tracking_file = open("D:\\Code\\Python\\tracking.txt", "w")
+        tracking_file = open("********************", "w")
         tracking_file.truncate()
         tracking_file.close()
 
@@ -104,9 +104,9 @@ while True:
 
     currentTime = now.strftime("%H:%M")
 
-    tracking = open("D:\\Code\\Python\\tracking.txt", "a")
+    tracking = open("********************", "a")
 
-    if os.stat("D:\\Code\\Python\\tracking.txt").st_size == 0:
+    if os.stat("********************").st_size == 0:
         tracking.write(currentSessionDayMonthYear + '\n')
 
     isOnlineStatus = True
@@ -125,16 +125,16 @@ while True:
 
     tracking.close()
 
-    if os.path.isfile(f"D:\\Code\\Python\\Data\\{saveFileName}.txt") == False:
-        os.system(f"echo new > D:\\Code\\Python\\Data\\{saveFileName}.txt")  # Create new save data file with content "new" 
+    if os.path.isfile("********************") == False:
+        os.system(f"echo new > ********************")  # Create new save data file with content "new" 
 
-    os.system(f"type D:\\code\\python\\tracking.txt > D:\\code\\python\\data\\{saveFileName}.txt")
+    os.system(f"type ********************")
         # Copy data from tracking.txt to saveFileName.txt
 
-    os.system("python -u D:\\Code\\Python\\Statistics.py")
-    if os.path.isfile(f"D:\\Code\\Python\\Figure\\{saveFileName}.jpg") == False:
-        os.system(f"echo new > D:\\Code\\Python\\Figure\\{saveFileName}.jpg")
-    os.system(f"type D:\\code\\python\\figure.jpg > D:\\code\\python\\Figure\\{saveFileName}.jpg") 
+    os.system("python -u ********************")
+    if os.path.isfile(f"********************") == False:
+        os.system(f"echo new > ********************")
+    os.system(f"type ********************") 
         # Copy image from figure.jpg to saveFileName.jpg
 
     time.sleep(120)
