@@ -1,2 +1,2 @@
 # Tracking-Bot
-Hi :> This is another bot I made in spare time, hope you like it.
+Hi :> This is another bot I made in my spare time, hope you like it.
